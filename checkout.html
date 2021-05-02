@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Checkout</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+  <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/skel-panels.min.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    //Checkout Code
+
+    function check(e,value) {
+    //Check Charater
+    var unicode=e.charCode? e.charCode : e.keyCode;
+    if (value.indexOf(".") != -1)if( unicode == 46 )return false;
+    if (unicode!=8)if((unicode<48||unicode>57)&&unicode!=46)return false;
+    }
+
+    function checkLength(len,ele){
+      var fieldLength = ele.value.length;
+      if(fieldLength <= len){
+        return true;
+      }
+      else
+      {
+        var str = ele.value;
+        str = str.substring(0, str.length - 1);
+        ele.value = str;
+      }
+    }
+
+    function checkOut() {
+      var firstName = document.getElementById("firstName").value = "";
+      var lastName = document.getElementById("lastName").value = "";
+      var visa = document.getElementById("visa").checked = false;
+      var mastercard = document.getElementById("mastercard").checked = false;
+      var cardNumber = document.getElementById("cardNumber").value = "";
+      var country = document.getElementById("countrieslist").value = "";
+      var phoneNumber = document.getElementById("phoneNumber").value = "";
+      var address = document.getElementById("address").value = "";
+      var postCode = document.getElementById("postCode").value = "";
+      alert("Thank you for your time!");
+      window.location.href = "shop.html";
+    }
+
+
+  </script>
+  <noscript>
+    <link rel="stylesheet" href="css/skel-noscript.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-desktop.css" />
+  </noscript>
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header">
+      <div class="container">
+
+        <!-- Logo -->
+        <div id="logo">
+          <h1><a href="#">Manchester United</a></h1>
+          <span>Woke up this morning feeling fine
+            <br>I’ve got United on my mind</span>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li class="active"><a href="shop.html">Shop</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div id="main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Content -->
+					<div id="content" class="12u skel-cell-important">
+						<section>
+							<header>
+								<h2>Checkout</h2>
+							</header>
+                <form class="checkout" action="index.html" method="post" onsubmit="checkOut()">
+                  First Name:
+                  <br>
+                  <input type="text" class="firstName" id="firstName" required>
+                  <br>
+                  Last Name:
+                  <br>
+                  <input type="text" class="lastName" id="lastName" required>
+                  <br>
+                  Payment Method:
+                  <br>
+                  <label>VISA <input type="radio" name="paymentMethod" class="paymentMethod" id="visa" required></label> &nbsp;
+                  <label>MasterCard <input type="radio" name="paymentMethod" class="paymentMethod" id="mastercard" required></label>
+                  <br>
+                  Card Number:
+                  <br>
+                  <input type="number" class="cardNumber" id="cardNumber" onKeyPress="return check(event,value)" onInput="checkLength(16,this)">
+                  <br>
+                  Country:
+                  <br>
+                  <input list="countries" class="country" id="countrieslist" required>
+  								<datalist id="countries">
+  									<option value="Afganistan (+93)">
+  									<option value="Algeria (+355)">
+  									<option value="Albania (+213)">
+  									<option value="Bangladesh (+880)">
+  									<option value="Bolivia (+591)">
+  									<option value="Belgium (+32)">
+  									<option value="Brazil (+55)">
+  									<option value="Cameroon (+237)">
+  									<option value="Chile (+56)">
+  									<option value="Colombia (+57)">
+  									<option value="Costa Rica (+506)">
+  									<option value="Croatia (+385)">
+  									<option value="Czech Republic (+420)">
+  									<option value="Cambodia (+855)">
+  									<option value="Canada (+1)">
+  									<option value="China (+86)">
+  									<option value="Denmark (+45)">
+  									<option value="Ecuador (+593)">
+  									<option value="Egypt (+20)">
+  									<option value="Estonia (+372)">
+  									<option value="Finland (+358)">
+  									<option value="France (+33)">
+  									<option value="Gabon (+241)">
+  									<option value="Ghana (+233)">
+  									<option value="Greece (+30)">
+  									<option value="Germany (+49)">
+  									<option value="Greenland (+299)">
+  									<option value="Guinea (+224)">
+  									<option value="Haiti (+509)">
+  									<option value="Hong Kong (+852)">
+  									<option value="Honduras (+504)">
+  									<option value="Hungary (+36)">
+  									<option value="Iceland (+354)">
+  									<option value="Indonesia (+62)">
+  									<option value="Iraq (+964)">
+  									<option value="Italy (+39)">
+  									<option value="India (+91)">
+  									<option value="Iran (+98)">
+  									<option value="Ireland (+353)">
+  									<option value="Israel (+972)">
+  									<option value="Jamaica (+1-876)">
+  									<option value="Jordan (+962)">
+  									<option value="Japan (+81)">
+  									<option value="Kazakhstan (+7)">
+  									<option value="Korea (+82)">
+  									<option value="Kenya (+254)">
+  									<option value="Lebanon (+961)">
+  									<option value="Liberia (+231)">
+  									<option value="Libya (+218)">
+  									<option value="Maldives (+960)">
+  									<option value="Mexico (+52)">
+  									<option value="Mongolia (+976)">
+  									<option value="Morocco (+212)">
+  									<option value="Myanmar (+95)">
+  									<option value="Madagascar (+261)">
+  									<option value="Malaysia (+60)">
+  									<option value="Nepal (+977)">
+  									<option value="Netherlands (+599)">
+  									<option value="New Zealand (+64)">
+  									<option value="Norway (+47)">
+  									<option value="Pakistan (+92)">
+  									<option value="Panama (+507)">
+  									<option value="Paraguay (+595)">
+  									<option value="Philippines (+63)">
+  									<option value="Portugal (+351)">
+  									<option value="Peru (+51)">
+  									<option value="Poland (+48)">
+  									<option value="Puerto Rico (+1-787, 1-939)">
+  									<option value="Qatar (+974)">
+  									<option value="Romania (+40)">
+  									<option value="Russia (+7)">
+  									<option value="Senegal (+221)">
+  									<option value="Singapore (+65)">
+  									<option value="Slovakia (+421)">
+  									<option value="South Africa (+27)">
+  									<option value="Spain (+34)">
+  									<option value="Sudan (+249)">
+  									<option value="Sweden (+46)">
+  									<option value="Syria (+963)">
+  									<option value="Saudi Arabia (+966)">
+  									<option value="Serbia (+381)">
+  									<option value="Slovenia (+386)">
+  									<option value="Somalia (+252)">
+  									<option value="Sri Lanka (+94)">
+  									<option value="Switzerland (+41)">
+  									<option value="Thailand (+66)">
+  									<option value="Turkey (+90)">
+  									<option value="Tonga (+676)">
+  									<option value="Tunisia (+216)">
+  									<option value="Uganda (+256)">
+  									<option value="United States (+1)">
+  									<option value="Ukraine (+380)">
+  									<option value="United Kingdom (+44)">
+  									<option value="Uruguay (+598)">
+  									<option value="Vietnam (+84)">
+  									<option value="Venezuela (+58)">
+  									<option value="Yemen (+967)">
+  									<option value="Zimbabwe (+263)">
+  								</datalist>
+                  <br>
+                  Phone Number:
+                  <br>
+                  <input type="number" class="phoneNumber" id="phoneNumber" required>
+                  <br>
+                  Address:
+                  <br>
+                  <input type="text" class="address" id="address" required>
+                  <br>
+                  Post Code:
+                  <br>
+                  <input type="number" class="postCode" id="postCode" required>
+                  <br><br>
+                  <input type="submit" class="submit" id="submit" value="Submit">
+                </form>
+                </section>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="4u">
+						<section>
+							<h2>Social Media</h2>
+							<ul class="default">
+								<li><a href="https://www.instagram.com/r5th_/" target="_blank">My Instagram</a></li>
+								<li><a href="https://www.twitter.com/FifaGaming100" target="_blank">My Twitter</a></li>
+								<li><a href="https://www.instagram.com/manchesterunited/" target="_blank">Manchester United's Twitter</a></li>
+								<li><a href="https://twitter.com/ManUtd" target="_blank">Manchester United's Instagram</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="4u">
+						<section>
+							<h2>Inspiration for this Website</h2>
+							<ul class="default">
+								<li><a href="https://www.manutd.com/en" target="_blank">Manchester United</a></li>
+								<li><a href="https://www.ea.com/games/fifa" target="_blank">FIFA</a></li>
+								<li><a href="https://twitter.com/olegs26_ole" target="_blank">Ole Gunnar Solskjaer</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="4u">
+						<section>
+							<h2>Favourite Players</h2>
+							<ul class="default">
+								<li><a href="https://twitter.com/LukeShaw23" target="_blank">Luke Shaw</a></li>
+								<li><a href="https://twitter.com/paulpogba" target="_blank">Paul Pogba</a></li>
+								<li><a href="https://twitter.com/vlindelof" target="_blank">Victor Lindelof</a></li>
+								<li><a href="https://twitter.com/DalotDiogo" target="_blank">Diogo Dalot</a></li>
+								<li><a href="https://twitter.com/AnthonyMartial" target="_blank">Anthony Martial</a></li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+  </body>
+</html>
