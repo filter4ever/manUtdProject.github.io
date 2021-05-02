@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<!--
+	Iridium by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Contact Us</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/localstorage.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container">
+
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">Manchester United</a></h1>
+					<span>Woke up this morning feeling fine
+						<br>I’ve got United on my mind</span>
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Homepage</a></li>
+						<li><a href="players.html">Players</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li class="active"><a href="contactus.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Content -->
+					<div id="content" class="12u skel-cell-important">
+						<section>
+							<header>
+								<h2>Contact Us</h2>
+								<span class="byline">Provide your feedback over here!</span>
+							</header>
+								<form class="contactus" onsubmit="saveToStorage()">
+								<label for="firstName">First Name:</label>
+								<br>
+								<input type="text" name="firstName" placeholder="John" class="textfield" id="firstName" required>
+								<br>
+								<label for="lastName">Last Name: </label>
+								<br>
+								<input type="text" name="lastName" placeholder="Smith" class="textfield" id="lastName" required>
+								<br>
+								<label for="reason">Why are you here?</label>
+								<br>
+								<label>Complaint<input type="radio" name="reason" id="complaint" required></label>
+								<br>
+								<label>Improvement<input type="radio" name="reason" id="improvement" required></label>
+								<br>
+								<label>Suggestions<input type="radio" name="reason" id="suggestion" required></label>
+								<br>
+								<label>Country:</label>
+								<br>
+								<input list="countries" id="countrieslist" class="country" required>
+								<datalist id="countries">
+									<option value="Afganistan">
+									<option value="Algeria">
+									<option value="Albania">
+									<option value="Bangladesh">
+									<option value="Bolivia">
+									<option value="Belgium">
+									<option value="Brazil">
+									<option value="Cameroon">
+									<option value="Chile">
+									<option value="Colombia">
+									<option value="Costa Rica">
+									<option value="Croatia">
+									<option value="Czech Republic">
+									<option value="Cambodia">
+									<option value="Canada">
+									<option value="China">
+									<option value="Cote d'Ivoire">
+									<option value="Denmark">
+									<option value="Ecuador">
+									<option value="Egypt">
+									<option value="Estonia">
+									<option value="Finland">
+									<option value="France">
+									<option value="Gabon">
+									<option value="Ghana">
+									<option value="Greece">
+									<option value="Germany">
+									<option value="Greenland">
+									<option value="Guinea">
+									<option value="Haiti">
+									<option value="Hong Kong">
+									<option value="Honduras">
+									<option value="Hungary">
+									<option value="Iceland">
+									<option value="Indonesia">
+									<option value="Iraq">
+									<option value="Italy">
+									<option value="India">
+									<option value="Iran">
+									<option value="Ireland">
+									<option value="Israel">
+									<option value="Jamaica">
+									<option value="Jordan">
+									<option value="Japan">
+									<option value="Kazakhstan">
+									<option value="Korea">
+									<option value="Kenya">
+									<option value="Lebanon">
+									<option value="Liberia">
+									<option value="Libya">
+									<option value="Maldives">
+									<option value="Mexico">
+									<option value="Mongolia">
+									<option value="Morocco">
+									<option value="Myanmar">
+									<option value="Madagascar">
+									<option value="Malaysia">
+									<option value="Nepal">
+									<option value="Netherlands">
+									<option value="New Zealand">
+									<option value="Norway">
+									<option value="Pakistan">
+									<option value="Panama">
+									<option value="Paraguay">
+									<option value="Philippines">
+									<option value="Portugal">
+									<option value="Peru">
+									<option value="Poland">
+									<option value="Puerto Rico">
+									<option value="Qatar">
+									<option value="Romania">
+									<option value="Russia">
+									<option value="Senegal">
+									<option value="Singapore">
+									<option value="Slovakia">
+									<option value="South Africa">
+									<option value="Spain">
+									<option value="Sudan">
+									<option value="Sweden">
+									<option value="Syria">
+									<option value="Saudi Arabia">
+									<option value="Serbia">
+									<option value="Slovenia">
+									<option value="Somalia">
+									<option value="Sri Lanka">
+									<option value="Switzerland">
+									<option value="Thailand">
+									<option value="Turkey">
+									<option value="Tonga">
+									<option value="Tunisia">
+									<option value="Uganda">
+									<option value="United States">
+									<option value="Ukraine">
+									<option value="United Kingdom">
+									<option value="Uruguay">
+									<option value="Vietnam">
+									<option value="Venezuela">
+									<option value="Yemen">
+									<option value="Zimbabwe">
+								</datalist>
+								<br>
+								<label>E-mail:</label>
+								<br>
+								<input type="email" placeholder="abcdefg123@xyz.com" class="textfield" id="email" required>
+								<br>
+								<label for="feedback">Feedback: </label>
+								<br>
+								<textarea name="feedback"class="textfield" rows="8" placeholder="Nice to meet you!" id="textarea" required></textarea>
+								<br>
+								<input type="submit" class="submit" id="submit" value="Submit">&nbsp;
+								<input type="button" class="submit" id="feedbacklist" value="Feedback List" onclick="location.href = 'adminlogin.html';">
+							</form>
+						</section>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="featured">
+			<div class="container">
+				<div class="row">
+					<div class="4u">
+						<h2>Homepage</h2>
+						<a href="index.html" class="image full"><img src="images/manchesterunited05.jpg" alt="" /></a>
+						<p>If you are lost in the webpage, you can go back to the web hub! :)</p>
+						<p><a href="index.html" class="button">More Details</a></p>
+					</div>
+					<div class="4u">
+						<h2>Players</h2>
+						<a href="players.html" class="image full"><img src="images/manchesterunited02.jpg" alt="" /></a>
+						<p>Check out the hardworking players who play for the badge!</p>
+						<p><a href="players.html" class="button">More Details</a></p>
+					</div>
+					<div class="4u">
+						<h2>Shop</h2>
+						<a href="shop.html" class="image full"><img src="images/manchesterunited03.jpg" alt="" /></a>
+						<p>Order yourself some of the club's merchandise over at our shop!</p>
+						<p><a href="shop.html" class="button">More Details</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="4u">
+						<section>
+							<h2>Social Media</h2>
+							<ul class="default">
+								<li><a href="https://www.instagram.com/r5th_/" target="_blank">My Instagram</a></li>
+								<li><a href="https://www.twitter.com/FifaGaming100" target="_blank">My Twitter</a></li>
+								<li><a href="https://www.instagram.com/manchesterunited/" target="_blank">Manchester United's Twitter</a></li>
+								<li><a href="https://twitter.com/ManUtd" target="_blank">Manchester United's Instagram</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="4u">
+						<section>
+							<h2>Inspiration for this Website</h2>
+							<ul class="default">
+								<li><a href="https://www.manutd.com/en" target="_blank">Manchester United</a></li>
+								<li><a href="https://www.ea.com/games/fifa" target="_blank">FIFA</a></li>
+								<li><a href="https://twitter.com/olegs26_ole" target="_blank">Ole Gunnar Solskjaer</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="4u">
+						<section>
+							<h2>Favourite Players</h2>
+							<ul class="default">
+								<li><a href="https://twitter.com/LukeShaw23" target="_blank">Luke Shaw</a></li>
+								<li><a href="https://twitter.com/paulpogba" target="_blank">Paul Pogba</a></li>
+								<li><a href="https://twitter.com/vlindelof" target="_blank">Victor Lindelof</a></li>
+								<li><a href="https://twitter.com/DalotDiogo" target="_blank">Diogo Dalot</a></li>
+								<li><a href="https://twitter.com/AnthonyMartial" target="_blank">Anthony Martial</a></li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+
+	</body>
+</html>
